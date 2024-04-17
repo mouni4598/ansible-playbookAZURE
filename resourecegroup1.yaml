@@ -1,0 +1,10 @@
+---
+- name: Create Azure Resource Group
+  hosts: localhost
+  gather_facts: no
+
+  tasks:
+    - name: Create resource group
+      azure.azcollection.azure_rm_resourcegroup:
+        name: ansibleplayrg
+        location: eastus
